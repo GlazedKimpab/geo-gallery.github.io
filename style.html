@@ -1,0 +1,96 @@
+:root {
+  --concrete: #d9dde0;
+  --mount: #f7f7f5;
+  --ink: #1e2b36;
+  --muted: #5b6872;
+  --taxiway: #e0a800;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--concrete);
+  color: var(--ink);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.top h1 {
+  margin: 0;
+  font-family: "Barlow Semi Condensed", "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.top p {
+  margin: 0.6rem 0 0;
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+/* photos sit in white mounts, like prints pinned to a wall */
+.wall {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
+  column-count: 3;
+  column-gap: 1.25rem;
+}
+
+figure {
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 0.6rem 0.5rem;
+  background: var(--mount);
+  break-inside: avoid;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #c4cace; /* shows while an image loads */
+}
+
+figcaption {
+  padding-top: 0.45rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+figcaption b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--taxiway);
+  outline-offset: 2px;
+}
+
+@media (max-width: 800px) {
+  .wall { column-count: 2; }
+}
+
+@media (max-width: 480px) {
+  .wall { column-count: 1; }
+  .top { padding-top: 2rem; }
+}
