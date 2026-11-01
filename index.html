@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Geo gallery</title>
+  <title>Geo gallery - GeoFS photos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -11,47 +11,157 @@
 </head>
 <body>
 
-<header class="top">
-  <h1>Geo gallery</h1>
-  <p>Screenshots from GeoFS flights. Sunsets, bad landings, and the odd good one.</p>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="index.html">Geo gallery</a>
+    <nav>
+      <a class="on" href="#latest">Photos</a>
+      <a href="#aircraft">Aircraft</a>
+      <a href="#airports">Airports</a>
+      <a href="#upload">Upload</a>
+    </nav>
+    <a class="login" href="#login">Log in</a>
+  </div>
 </header>
 
-<main class="wall">
+<section class="hero">
+  <div class="hero-in">
+    <div class="pitch">
+      <h1>Your best GeoFS flights, all in one place</h1>
+      <p>Browse screenshots from pilots around the world, or share your own landings, sunsets and near misses.</p>
+      <form class="search" action="#" onsubmit="return false">
+        <input type="search" placeholder="Search an aircraft, airport or pilot" aria-label="Search">
+        <button type="submit">Search</button>
+      </form>
+    </div>
 
-  <figure>
-    <img src="photos/a320-lisbon.jpg" width="1600" height="900" alt="An A320 on final approach into Lisbon">
-    <figcaption><b>A320</b> on final into Lisbon, LPPT</figcaption>
-  </figure>
+    <figure class="potd">
+      <a href="photos/Screenshot%202026-08-17%20185200.png"><img src="photos/Screenshot%202026-08-17%20185200.png" alt="Scandinavian Airlines Airbus A350-900 landing in Copenhagen"></a>
+      <figcaption>
+        <span class="label">Photo of the day</span>
+        <b class="title">Scandinavian Airlines Airbus A350-900 landing in Copenhagen</b>
+        <dl class="spec">
+          <div><dt>Aircraft</dt><dd>Airbus A350-900</dd></div>
+          <div><dt>Airline</dt><dd>Scandinavian Airlines</dd></div>
+          <div><dt>Airport</dt><dd>Copenhagen (EKCH)</dd></div>
+          <div><dt>Taken</dt><dd>17 August 2026</dd></div>
+          <div><dt>Photographer</dt><dd><a href="#">Glazed_Kimpab</a></dd></div>
+        </dl>
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
-  <figure>
-    <img src="photos/c172-alps.jpg" width="1200" height="1600" alt="A Cessna 172 over snowy Alpine peaks">
-    <figcaption><b>C172</b> over the Alps, late afternoon</figcaption>
-  </figure>
+<div class="wrap">
 
-  <figure>
-    <img src="photos/b747-night.jpg" width="1600" height="900" alt="A 747 taking off at night">
-    <figcaption><b>747</b> departing at night</figcaption>
-  </figure>
+  <main id="latest">
+    <div class="head">
+      <h2>Latest photos</h2>
+      <a href="#">See all photos</a>
+    </div>
 
-  <figure>
-    <img src="photos/f16-clouds.jpg" width="1600" height="1000" alt="An F-16 banking above a cloud layer">
-    <figcaption><b>F-16</b> above the cloud deck</figcaption>
-  </figure>
+    <div class="grid">
 
-  <figure>
-    <img src="photos/a380-sunset.jpg" width="1400" height="1400" alt="An A380 on the runway at sunset">
-    <figcaption><b>A380</b> holding short, sunset</figcaption>
-  </figure>
+      <article class="card">
+        <a href="photos/Screenshot%202026-08-17%20185200.png"><img src="photos/Screenshot%202026-08-17%20185200.png" alt="Scandinavian Airlines A350-900 landing in Copenhagen"></a>
+        <div class="meta">
+          <span class="tag airliner">Airliner</span>
+          <a class="type" href="#">Airbus A350-900</a>
+          <span>Scandinavian Airlines, Copenhagen (EKCH)</span>
+          <span class="by">by <a href="#">Glazed_Kimpab</a>, 17 Aug</span>
+        </div>
+      </article>
 
-  <figure>
-    <img src="photos/dash8-coast.jpg" width="1600" height="900" alt="A Dash 8 flying along a coastline">
-    <figcaption><b>Dash 8</b> following the coast</figcaption>
-  </figure>
+      <article class="card">
+        <a href="photos/c172-alps.jpg"><img src="photos/c172-alps.jpg" alt="Cessna 172 over the Alps"></a>
+        <div class="meta">
+          <span class="tag ga">General aviation</span>
+          <a class="type" href="#">Cessna 172</a>
+          <span>Over the Alps</span>
+          <span class="by">by <a href="#">username</a>, 30 Oct</span>
+        </div>
+      </article>
 
-</main>
+      <article class="card">
+        <a href="photos/b747-night.jpg"><img src="photos/b747-night.jpg" alt="747 taking off at night"></a>
+        <div class="meta">
+          <span class="tag airliner">Airliner</span>
+          <a class="type" href="#">Boeing 747-400</a>
+          <span>Frankfurt (EDDF)</span>
+          <span class="by">by <a href="#">username</a>, 29 Oct</span>
+        </div>
+      </article>
 
-<footer>
-  <p>Screenshots taken in GeoFS. This site is not affiliated with GeoFS.</p>
+      <article class="card">
+        <a href="photos/f16-clouds.jpg"><img src="photos/f16-clouds.jpg" alt="F-16 above clouds"></a>
+        <div class="meta">
+          <span class="tag military">Military</span>
+          <a class="type" href="#">F-16 Fighting Falcon</a>
+          <span>FL240, over the Atlantic</span>
+          <span class="by">by <a href="#">username</a>, 29 Oct</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="photos/a380-sunset.jpg"><img src="photos/a380-sunset.jpg" alt="A380 at sunset"></a>
+        <div class="meta">
+          <span class="tag airliner">Airliner</span>
+          <a class="type" href="#">Airbus A380-800</a>
+          <span>Dubai (OMDB)</span>
+          <span class="by">by <a href="#">username</a>, 28 Oct</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="photos/dash8-coast.jpg"><img src="photos/dash8-coast.jpg" alt="Dash 8 along a coastline"></a>
+        <div class="meta">
+          <span class="tag regional">Regional</span>
+          <a class="type" href="#">Dash 8 Q400</a>
+          <span>Near Bergen (ENBR)</span>
+          <span class="by">by <a href="#">username</a>, 27 Oct</span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <aside>
+
+    <section id="aircraft" class="box">
+      <h3>Browse by aircraft</h3>
+      <ul class="counts">
+        <li><a href="#">Airbus A320</a><span>0</span></li>
+        <li><a href="#">Boeing 737-800</a><span>0</span></li>
+        <li><a href="#">Boeing 747-400</a><span>0</span></li>
+        <li><a href="#">Cessna 172</a><span>0</span></li>
+        <li><a href="#">Dash 8 Q400</a><span>0</span></li>
+      </ul>
+    </section>
+
+    <section id="airports" class="box">
+      <h3>Popular airports</h3>
+      <ul class="counts">
+        <li><a href="#">Lisbon (LPPT)</a><span>0</span></li>
+        <li><a href="#">Frankfurt (EDDF)</a><span>0</span></li>
+        <li><a href="#">Dubai (OMDB)</a><span>0</span></li>
+        <li><a href="#">London Heathrow (EGLL)</a><span>0</span></li>
+      </ul>
+    </section>
+
+    <section id="upload" class="box orange">
+      <h3>Share your flights</h3>
+      <p>Accounts and uploads are coming soon.</p>
+    </section>
+
+  </aside>
+
+</div>
+
+<footer class="site-foot">
+  <div class="foot-in">
+    <p><b>Geo gallery</b><br>A community photo gallery for GeoFS pilots.</p>
+    <p>Screenshots are taken in GeoFS. This site is not affiliated with GeoFS.</p>
+  </div>
 </footer>
 
 </body>
