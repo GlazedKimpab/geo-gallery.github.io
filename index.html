@@ -4,139 +4,182 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Geo gallery - GeoFS photos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="top">
+<header id="top">
   <div class="top-in">
     <a class="logo" href="index.html">Geo gallery</a>
-    <ul class="menu">
-      <li><a class="on" href="#latest">Photos</a></li>
-      <li><a href="#aircraft">Aircraft</a></li>
-      <li><a href="#airports">Airports</a></li>
-      <li><a href="#upload">Upload</a></li>
-    </ul>
+    <nav>
+      <a class="on" href="#latest">Photos</a>
+      <a href="#aircraft">Aircraft</a>
+      <a href="#airports">Airports</a>
+      <a href="#upload">Upload</a>
+    </nav>
     <form class="search" action="#" onsubmit="return false">
-      <input type="text" placeholder="Search" aria-label="Search">
-      <button type="submit">Go</button>
+      <input type="text" placeholder="Search aircraft, airport or pilot" aria-label="Search">
+      <button type="submit">Search</button>
     </form>
     <a class="login" href="#login">Log in</a>
   </div>
-</div>
+</header>
+
+<section class="band">
+  <div class="band-in">
+    <h2>Photo of the day</h2>
+    <div class="potd">
+      <a class="big" href="Screenshot 202026-08-17 20185200.png">
+        <img src="Screenshot 202026-08-17 20185200.png" alt="Scandinavian Airlines Airbus A350-900 landing in Copenhagen">
+      </a>
+      <div class="info">
+        <h3>Scandinavian Airlines Airbus A350-900 landing in Copenhagen</h3>
+        <table class="spec">
+          <tr><th>Aircraft</th><td>Airbus A350-900</td></tr>
+          <tr><th>Airline</th><td>Scandinavian Airlines</td></tr>
+          <tr><th>Airport</th><td>Copenhagen (EKCH)</td></tr>
+          <tr><th>Taken</th><td>17 August 2026</td></tr>
+          <tr><th>Photographer</th><td><a href="#">Glazed_Kimpab</a></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="page">
 
-  <div class="content">
-
-    <h2>Photo of the day</h2>
-    <div class="potd">
-      <a href="Screenshot 202026-08-17 20185200.png"><img src="Screenshot 202026-08-17 20185200.png" alt="Scandinavian Airlines Airbus A350-900 landing in Copenhagen"></a>
-      <table class="spec">
-        <caption>Scandinavian Airlines Airbus A350-900 landing in Copenhagen</caption>
-        <tr><th>Aircraft</th><td>Airbus A350-900</td></tr>
-        <tr><th>Airline</th><td>Scandinavian Airlines</td></tr>
-        <tr><th>Airport</th><td>Copenhagen (EKCH)</td></tr>
-        <tr><th>Taken</th><td>17 August 2026</td></tr>
-        <tr><th>Photographer</th><td><a href="#">Glazed_Kimpab</a></td></tr>
-      </table>
+  <main class="content">
+    <div class="head">
+      <h2 id="latest">Latest photos</h2>
+      <a href="#">All photos</a>
     </div>
 
-    <h2 id="latest">Latest photos</h2>
     <ul class="thumbs">
 
       <li>
         <a href="Screenshot 202026-08-17 20185200.png"><img src="Screenshot 202026-08-17 20185200.png" alt="SAS A350-900 landing in Copenhagen"></a>
-        <b><a href="#">Airbus A350-900</a></b>
-        <span>Copenhagen (EKCH)</span>
-        <small><i class="airliner">Airliner</i> &middot; Glazed_Kimpab, 17 Aug</small>
+        <div class="cap">
+          <i class="cat airliner">Airliner</i>
+          <b><a href="#">Airbus A350-900</a></b>
+          <span>Copenhagen (EKCH)</span>
+          <small>Glazed_Kimpab, 17 Aug</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/c172-alps.jpg"><img src="photos/c172-alps.jpg" alt="Cessna 172 over the Alps"></a>
-        <b><a href="#">Cessna 172</a></b>
-        <span>Over the Alps</span>
-        <small><i class="ga">General aviation</i> &middot; username, 30 Oct</small>
+        <div class="cap">
+          <i class="cat ga">General aviation</i>
+          <b><a href="#">Cessna 172</a></b>
+          <span>Over the Alps</span>
+          <small>username, 30 Oct</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/b747-night.jpg"><img src="photos/b747-night.jpg" alt="747 taking off at night"></a>
-        <b><a href="#">Boeing 747-400</a></b>
-        <span>Frankfurt (EDDF)</span>
-        <small><i class="airliner">Airliner</i> &middot; username, 29 Oct</small>
+        <div class="cap">
+          <i class="cat airliner">Airliner</i>
+          <b><a href="#">Boeing 747-400</a></b>
+          <span>Frankfurt (EDDF)</span>
+          <small>username, 29 Oct</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/f16-clouds.jpg"><img src="photos/f16-clouds.jpg" alt="F-16 above clouds"></a>
-        <b><a href="#">F-16 Fighting Falcon</a></b>
-        <span>FL240, over the Atlantic</span>
-        <small><i class="military">Military</i> &middot; username, 29 Oct</small>
+        <div class="cap">
+          <i class="cat military">Military</i>
+          <b><a href="#">F-16 Fighting Falcon</a></b>
+          <span>FL240, over the Atlantic</span>
+          <small>username, 29 Oct</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/a380-sunset.jpg"><img src="photos/a380-sunset.jpg" alt="A380 at sunset"></a>
-        <b><a href="#">Airbus A380-800</a></b>
-        <span>Dubai (OMDB)</span>
-        <small><i class="airliner">Airliner</i> &middot; username, 28 Oct</small>
+        <div class="cap">
+          <i class="cat airliner">Airliner</i>
+          <b><a href="#">Airbus A380-800</a></b>
+          <span>Dubai (OMDB)</span>
+          <small>username, 28 Oct</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/dash8-coast.jpg"><img src="photos/dash8-coast.jpg" alt="Dash 8 along a coastline"></a>
-        <b><a href="#">Dash 8 Q400</a></b>
-        <span>Near Bergen (ENBR)</span>
-        <small><i class="regional">Regional</i> &middot; username, 27 Oct</small>
+        <div class="cap">
+          <i class="cat regional">Regional</i>
+          <b><a href="#">Dash 8 Q400</a></b>
+          <span>Near Bergen (ENBR)</span>
+          <small>username, 27 Oct</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/heli-city.jpg"><img src="photos/heli-city.jpg" alt="Helicopter over a city"></a>
-        <b><a href="#">Bell 206</a></b>
-        <span>Downtown, low level</span>
-        <small><i class="heli">Helicopter</i> &middot; username, 26 Oct</small>
+        <div class="cap">
+          <i class="cat heli">Helicopter</i>
+          <b><a href="#">Bell 206</a></b>
+          <span>Downtown, low level</span>
+          <small>username, 26 Oct</small>
+        </div>
       </li>
 
       <li>
         <a href="photos/a320-lisbon.jpg"><img src="photos/a320-lisbon.jpg" alt="A320 on final into Lisbon"></a>
-        <b><a href="#">Airbus A320</a></b>
-        <span>Lisbon (LPPT)</span>
-        <small><i class="airliner">Airliner</i> &middot; username, 25 Oct</small>
+        <div class="cap">
+          <i class="cat airliner">Airliner</i>
+          <b><a href="#">Airbus A320</a></b>
+          <span>Lisbon (LPPT)</span>
+          <small>username, 25 Oct</small>
+        </div>
       </li>
 
     </ul>
+  </main>
 
-  </div>
+  <aside class="side">
 
-  <div class="side">
+    <section class="box">
+      <h3 id="aircraft">Aircraft types</h3>
+      <ul>
+        <li><a href="#">Airbus A320</a></li>
+        <li><a href="#">Airbus A350-900</a></li>
+        <li><a href="#">Boeing 737-800</a></li>
+        <li><a href="#">Boeing 747-400</a></li>
+        <li><a href="#">Cessna 172</a></li>
+        <li><a href="#">Dash 8 Q400</a></li>
+      </ul>
+    </section>
 
-    <h3 id="aircraft">Aircraft types</h3>
-    <ul>
-      <li><a href="#">Airbus A320</a></li>
-      <li><a href="#">Airbus A350-900</a></li>
-      <li><a href="#">Boeing 737-800</a></li>
-      <li><a href="#">Boeing 747-400</a></li>
-      <li><a href="#">Cessna 172</a></li>
-      <li><a href="#">Dash 8 Q400</a></li>
-    </ul>
+    <section class="box">
+      <h3 id="airports">Airports</h3>
+      <ul>
+        <li><a href="#">Copenhagen (EKCH)</a></li>
+        <li><a href="#">Frankfurt (EDDF)</a></li>
+        <li><a href="#">Dubai (OMDB)</a></li>
+        <li><a href="#">Lisbon (LPPT)</a></li>
+      </ul>
+    </section>
 
-    <h3 id="airports">Airports</h3>
-    <ul>
-      <li><a href="#">Copenhagen (EKCH)</a></li>
-      <li><a href="#">Frankfurt (EDDF)</a></li>
-      <li><a href="#">Dubai (OMDB)</a></li>
-      <li><a href="#">Lisbon (LPPT)</a></li>
-    </ul>
+    <section class="box">
+      <h3 id="upload">Photographers</h3>
+      <ul>
+        <li><a href="#">Glazed_Kimpab</a></li>
+      </ul>
+    </section>
 
-    <h3 id="upload">Photographers</h3>
-    <ul>
-      <li><a href="#">Glazed_Kimpab</a></li>
-    </ul>
-
-  </div>
+  </aside>
 
 </div>
 
-<div id="foot">
+<footer id="foot">
   Screenshots taken in GeoFS. Geo gallery is not affiliated with GeoFS.
-</div>
+</footer>
 
 </body>
 </html>
